@@ -16,25 +16,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XkX-WJ-8YS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="203" width="414" height="659"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4T-2F-w1b">
+                                <rect key="frame" x="60" y="76" width="295" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM4-xC-3yT">
+                                <rect key="frame" x="60" y="129" width="295" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cM4-xC-3yT" firstAttribute="top" secondItem="o4T-2F-w1b" secondAttribute="bottom" constant="19" id="EuX-WI-DAE"/>
+                            <constraint firstItem="o4T-2F-w1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Fsx-6C-FqH"/>
                             <constraint firstItem="XkX-WJ-8YS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KhE-uf-7Rc"/>
-                            <constraint firstItem="XkX-WJ-8YS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bem-ew-Ha3"/>
+                            <constraint firstItem="XkX-WJ-8YS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="bem-ew-Ha3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XkX-WJ-8YS" secondAttribute="bottom" id="ize-m2-ZDP"/>
+                            <constraint firstItem="o4T-2F-w1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="lvz-Jc-6Al"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XkX-WJ-8YS" secondAttribute="trailing" id="u4x-Xh-gIW"/>
+                            <constraint firstItem="o4T-2F-w1b" firstAttribute="leading" secondItem="cM4-xC-3yT" secondAttribute="leading" id="xux-gK-KUO"/>
+                            <constraint firstItem="o4T-2F-w1b" firstAttribute="trailing" secondItem="cM4-xC-3yT" secondAttribute="trailing" id="zPV-Rm-Dsb"/>
+                            <constraint firstItem="o4T-2F-w1b" firstAttribute="centerX" secondItem="XkX-WJ-8YS" secondAttribute="centerX" id="ztq-aG-1IX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="commentText" destination="cM4-xC-3yT" id="1ix-st-hxF"/>
                         <outlet property="mapView" destination="XkX-WJ-8YS" id="oYB-IE-Mo5"/>
+                        <outlet property="nameText" destination="cM4-xC-3yT" id="Fpa-6J-m0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
 </document>
