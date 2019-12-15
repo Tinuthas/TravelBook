@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XkX-WJ-8YS">
-                                <rect key="frame" x="0.0" y="203" width="414" height="659"/>
+                                <rect key="frame" x="0.0" y="256" width="414" height="606"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o4T-2F-w1b">
                                 <rect key="frame" x="60" y="76" width="295" height="34"/>
@@ -28,13 +28,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-UI-Gyp">
+                                <rect key="frame" x="137" y="194" width="141" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oiY-zi-KtS"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBV-Cz-WsY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="XkX-WJ-8YS" firstAttribute="top" secondItem="uHs-UI-Gyp" secondAttribute="bottom" constant="22" id="36B-XN-dw9"/>
                             <constraint firstItem="cM4-xC-3yT" firstAttribute="top" secondItem="o4T-2F-w1b" secondAttribute="bottom" constant="19" id="EuX-WI-DAE"/>
                             <constraint firstItem="o4T-2F-w1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Fsx-6C-FqH"/>
                             <constraint firstItem="XkX-WJ-8YS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KhE-uf-7Rc"/>
-                            <constraint firstItem="XkX-WJ-8YS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="bem-ew-Ha3"/>
+                            <constraint firstItem="uHs-UI-Gyp" firstAttribute="centerX" secondItem="cM4-xC-3yT" secondAttribute="centerX" id="NQJ-hE-GBt"/>
+                            <constraint firstItem="XkX-WJ-8YS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="212" id="bem-ew-Ha3"/>
+                            <constraint firstItem="uHs-UI-Gyp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="gx4-2H-csl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XkX-WJ-8YS" secondAttribute="bottom" id="ize-m2-ZDP"/>
                             <constraint firstItem="o4T-2F-w1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="lvz-Jc-6Al"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XkX-WJ-8YS" secondAttribute="trailing" id="u4x-Xh-gIW"/>
@@ -47,7 +60,7 @@
                     <connections>
                         <outlet property="commentText" destination="cM4-xC-3yT" id="1ix-st-hxF"/>
                         <outlet property="mapView" destination="XkX-WJ-8YS" id="oYB-IE-Mo5"/>
-                        <outlet property="nameText" destination="cM4-xC-3yT" id="Fpa-6J-m0J"/>
+                        <outlet property="nameText" destination="o4T-2F-w1b" id="a7g-lu-taT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
