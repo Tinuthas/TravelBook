@@ -131,8 +131,27 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             print(error.localizedDescription)
         }
        
-
+        NotificationCenter.default.post(name: NSNotification.Name("new place"), object: nil)
+        navigationController?.popViewController(animated: true)
         
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        let reuseId = "myAnnotation"
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView?.canShowCallout = true
+            pinView?.tintColor = UIColor.black
+            let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
+            pinView?.rightCalloutAccessoryView = button
+        }else {
+            pinView?.annotation = annotation
+        }
+        return pinView
     }
     
 }
